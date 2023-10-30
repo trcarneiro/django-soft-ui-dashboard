@@ -1,0 +1,13 @@
+
+<!-- templates/bots/list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Bots</h1>
+  <a href="{% url 'bots:create' %}">Criar Bot</a>
+  <ul>
+    {% for bot in bots %}
+      <li>{{ bot.nome }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
